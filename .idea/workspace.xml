@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="structuration et integration des classes">
-      <change afterPath="$PROJECT_DIR$/src/Affichage/AuthenticationMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Affichage/InformationsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Affichage/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Affichage/ReservationMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="sécuriser la conx de la bd">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +43,10 @@
     &quot;accountId&quot;: &quot;92c67f1d-b30a-46e7-9ff6-7b901d2181c9&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -57,30 +58,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Youcode/IdeaProjects/myHotel-JDBC&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.script.sql.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "47e2c7e1-58cc-470d-a6c4-d714b7040b36/database/\"myHotel\""
     ]
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="script.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/Database/script.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="47e2c7e1-58cc-470d-a6c4-d714b7040b36" namespace="database/&quot;myHotel&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +112,9 @@
       <option name="presentableId" value="Default" />
       <updated>1725917939945</updated>
       <workItem from="1725917941086" duration="20352000" />
-      <workItem from="1725977464451" duration="6292000" />
+      <workItem from="1725977464451" duration="6571000" />
+      <workItem from="1725992066530" duration="909000" />
+      <workItem from="1725993025898" duration="5202000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -132,7 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725975371788</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modiff du script.SQL">
+      <option name="closed" value="true" />
+      <created>1725991133197</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725991133197</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sécuriser la conx de la bd">
+      <option name="closed" value="true" />
+      <created>1725991218539</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725991218539</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +175,9 @@
     <MESSAGE value="mise en place de la structure &quot;Ripository Pattern&quot;" />
     <MESSAGE value="mise en place de la dbConnection" />
     <MESSAGE value="structuration et integration des classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="structuration et integration des classes" />
+    <MESSAGE value="modiff du script.SQL" />
+    <MESSAGE value="sécuriser la conx de la bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="sécuriser la conx de la bd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
