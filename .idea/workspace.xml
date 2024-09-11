@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inclure le digramme UML" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +105,7 @@
       <workItem from="1725917941086" duration="20352000" />
       <workItem from="1725977464451" duration="6571000" />
       <workItem from="1725992066530" duration="909000" />
-      <workItem from="1725993025898" duration="33658000" />
+      <workItem from="1725993025898" duration="34186000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -189,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726097793988</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="inclure le digramme UML">
+      <option name="closed" value="true" />
+      <created>1726098771878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726098771878</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +212,8 @@
     <MESSAGE value="remise du .idea dans gitignore" />
     <MESSAGE value=" reformulation du script sql et mise des entities et enums" />
     <MESSAGE value="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff" />
+    <MESSAGE value="inclure le digramme UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="inclure le digramme UML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
