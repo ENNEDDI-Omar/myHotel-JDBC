@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="sécuriser la conx de la bd">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="remise du .idea dans gitignore">
+      <change afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enums/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enums/SeasonType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enums/UserStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/AuthenticationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Pricing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -114,7 +121,7 @@
       <workItem from="1725917941086" duration="20352000" />
       <workItem from="1725977464451" duration="6571000" />
       <workItem from="1725992066530" duration="909000" />
-      <workItem from="1725993025898" duration="5202000" />
+      <workItem from="1725993025898" duration="23391000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -164,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725991218539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="application du nouveau script">
+      <option name="closed" value="true" />
+      <created>1726042295058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726042295058</updated>
+    </task>
+    <task id="LOCAL-00008" summary="remise du .idea dans gitignore">
+      <option name="closed" value="true" />
+      <created>1726042455076</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726042455076</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +200,9 @@
     <MESSAGE value="structuration et integration des classes" />
     <MESSAGE value="modiff du script.SQL" />
     <MESSAGE value="sécuriser la conx de la bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="sécuriser la conx de la bd" />
+    <MESSAGE value="application du nouveau script" />
+    <MESSAGE value="remise du .idea dans gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="remise du .idea dans gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
