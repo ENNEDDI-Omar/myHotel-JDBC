@@ -31,6 +31,16 @@ public class DbConnection {
         if (instance == null)
         {
             instance = new DbConnection();
+        }else {
+            try {
+                // Vérifie si la connexion est toujours valide
+                if (conx == null || conx.isClosed()) {
+                    instance.connect();
+                }
+            } catch (SQLException e) {
+                System.out.println("Failed to validate the database connection: " + e.getMessage());
+                e.printStackTrace();
+            }
         }
         return instance;
     }

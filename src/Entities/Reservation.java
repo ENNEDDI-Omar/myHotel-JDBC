@@ -1,5 +1,6 @@
 package Entities;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Reservation {
@@ -8,13 +9,13 @@ public class Reservation {
     private Client client;
     private LocalDate startDate;
     private LocalDate endDate;
-    private double totalPrice;
+    private BigDecimal totalPrice;
 
     // Default constructor
     public Reservation() {}
 
     // Parameterized constructor
-    public Reservation(Room room, Client client, LocalDate startDate, LocalDate endDate, double totalPrice) {
+    public Reservation(Room room, Client client, LocalDate startDate, LocalDate endDate, BigDecimal totalPrice) {
         this.room = room;
         this.client = client;
         this.startDate = startDate;
@@ -63,11 +64,11 @@ public class Reservation {
         this.endDate = endDate;
     }
 
-    public double getTotalPrice() {
+    public BigDecimal getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
+    public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
     }
 

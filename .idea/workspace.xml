@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="remise du .idea dans gitignore">
-      <change afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enums/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enums/SeasonType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enums/UserStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/AuthenticationException.java" afterDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment=" reformulation du script sql et mise des entities et enums">
+      <change afterPath="$PROJECT_DIR$/src/Entities/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Pricing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Pricing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -121,7 +116,7 @@
       <workItem from="1725917941086" duration="20352000" />
       <workItem from="1725977464451" duration="6571000" />
       <workItem from="1725992066530" duration="909000" />
-      <workItem from="1725993025898" duration="23391000" />
+      <workItem from="1725993025898" duration="32965000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -187,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726042455076</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" reformulation du script sql et mise des entities et enums">
+      <option name="closed" value="true" />
+      <created>1726079136548</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726079136548</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +205,8 @@
     <MESSAGE value="sécuriser la conx de la bd" />
     <MESSAGE value="application du nouveau script" />
     <MESSAGE value="remise du .idea dans gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="remise du .idea dans gitignore" />
+    <MESSAGE value=" reformulation du script sql et mise des entities et enums" />
+    <option name="LAST_COMMIT_MESSAGE" value=" reformulation du script sql et mise des entities et enums" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -73,7 +73,7 @@ CREATE TABLE reservations (
                               client_id INTEGER NOT NULL,
                               start_date DATE NOT NULL,
                               end_date DATE NOT NULL,
-                              total_price DECIMAL(6, 2),
+                              total_price DECIMAL(6, 2) CHECK ( total_price >= 0 ),
                               FOREIGN KEY (room_id) REFERENCES rooms(id),
                               FOREIGN KEY (client_id) REFERENCES clients(user_id),
 
