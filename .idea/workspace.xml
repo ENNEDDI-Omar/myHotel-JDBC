@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment=" reformulation du script sql et mise des entities et enums">
-      <change afterPath="$PROJECT_DIR$/src/Entities/Hotel.java" afterDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Pricing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +107,7 @@
       <workItem from="1725917941086" duration="20352000" />
       <workItem from="1725977464451" duration="6571000" />
       <workItem from="1725992066530" duration="909000" />
-      <workItem from="1725993025898" duration="32965000" />
+      <workItem from="1725993025898" duration="33658000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -190,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726079136548</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff">
+      <option name="closed" value="true" />
+      <created>1726097793988</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726097793988</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +205,8 @@
     <MESSAGE value="application du nouveau script" />
     <MESSAGE value="remise du .idea dans gitignore" />
     <MESSAGE value=" reformulation du script sql et mise des entities et enums" />
-    <option name="LAST_COMMIT_MESSAGE" value=" reformulation du script sql et mise des entities et enums" />
+    <MESSAGE value="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
