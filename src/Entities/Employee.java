@@ -1,5 +1,8 @@
 package Entities;
 
+import Exceptions.InvalidUserException;
+import Utils.ValidationUtils;
+
 public class Employee extends User {
     private String department;
     private String badgeNumber;
@@ -17,22 +20,29 @@ public class Employee extends User {
     }
 
     public void setDepartment(String department) {
-        this.department = department;
+        try {
+            ValidationUtils.validateDepartment(department);
+            this.department = department;
+        } catch (IllegalArgumentException e) {
+            throw new InvalidUserException("Failed to set department: " + e.getMessage(), e);
+        }
     }
 
-    public String getBadgeNumber() {
-        return badgeNumber;
-    }
-
+    public String getBadgeNumber() {return badgeNumber;}
     public void setBadgeNumber(String badgeNumber) {
-        this.badgeNumber = badgeNumber;
+        try {
+            ValidationUtils.validateBadgeNumber(badgeNumber);
+            this.badgeNumber = badgeNumber;
+        } catch (IllegalArgumentException e) {
+            throw new InvalidUserException("Failed to set badge number: " + e.getMessage(), e);
+        }
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "department='" + department + '\'' +
-                ", badgeNumber='" + badgeNumber + '\'' +
+                "department='" + getDepartment() + '\'' +
+                ", badgeNumber='" + getBadgeNumber() + '\'' +
                 ", id=" + getId() +
                 ", name='" + getName() + '\'' +
                 ", email='" + getEmail() + '\'' +

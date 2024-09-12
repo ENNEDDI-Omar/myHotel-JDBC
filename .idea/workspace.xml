@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inclure le digramme UML (image)" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inclure le digramme UML (image)">
+      <change afterPath="$PROJECT_DIR$/src/DAO/ClientDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/EmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/InvalidUserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/PasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ValidationEmailAndPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ValidationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Affichage/AuthenticationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Affichage/AuthenticationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +41,7 @@
         <option value="Enum" />
         <option value="Exception" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,14 +82,14 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC",
+    "last_opened_file_path": "C:/Users/Youcode/Downloads/postgresql-42.7.4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "settings.sync",
@@ -111,6 +137,8 @@
       <workItem from="1725977464451" duration="6571000" />
       <workItem from="1725992066530" duration="909000" />
       <workItem from="1725993025898" duration="34872000" />
+      <workItem from="1726127160842" duration="6387000" />
+      <workItem from="1726138493734" duration="19245000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -208,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726099073765</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="inclure le digramme UML (image)">
+      <option name="closed" value="true" />
+      <created>1726127214682</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726127214682</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

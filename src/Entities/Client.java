@@ -1,13 +1,16 @@
 package Entities;
 
+import Exceptions.InvalidUserException;
+import Utils.ValidationUtils;
+
 public class Client extends User {
     private int loyaltyPoints;
 
-    public Client() {}
+    public Client() {this.loyaltyPoints=0;}
 
-    public Client(int id, String name, String email, String password, Role role, int loyaltyPoints) {
+    public Client(int id, String name, String email, String password, Role role) {
         super(id, name, email, password, role);
-        this.loyaltyPoints = loyaltyPoints;
+        this.loyaltyPoints = 0;
     }
 
     public int getLoyaltyPoints() {
@@ -15,16 +18,21 @@ public class Client extends User {
     }
 
     public void setLoyaltyPoints(int loyaltyPoints) {
-        this.loyaltyPoints = loyaltyPoints;
+        try {
+            ValidationUtils.validateLoyaltyPoints(loyaltyPoints);
+            this.loyaltyPoints = loyaltyPoints;
+        } catch (IllegalArgumentException e) {
+            throw new InvalidUserException("Failed to set loyalty points: " + e.getMessage(), e);
+        }
     }
 
     @Override
     public String toString() {
         return "Client{" +
-                "loyaltyPoints=" + loyaltyPoints +
                 ", id=" + getId() +
                 ", name='" + getName() + '\'' +
                 ", email='" + getEmail() + '\'' +
+                "loyaltyPoints=" + getLoyaltyPoints() +
                 '}';
     }
 }

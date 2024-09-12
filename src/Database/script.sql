@@ -1,7 +1,5 @@
 -- Suppression des tables existantes pour éviter des erreurs lors de la création
 DROP TABLE IF EXISTS reservations CASCADE;
-DROP TABLE IF EXISTS clients CASCADE;
-DROP TABLE IF EXISTS employees CASCADE;
 DROP TABLE IF EXISTS pricing CASCADE;
 DROP TABLE IF EXISTS rooms CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
@@ -31,19 +29,10 @@ CREATE TABLE users (
                        password VARCHAR(255) NOT NULL,
                        status user_status NOT NULL,
                        role_id INTEGER NOT NULL,
-                       FOREIGN KEY (role_id) REFERENCES roles(id)
-);
-
--- Création des tables spécifiques aux types d'utilisateur
-CREATE TABLE clients (
-                         user_id INTEGER PRIMARY KEY REFERENCES users(id),
-                         loyalty_points INT DEFAULT 0
-);
-
-CREATE TABLE employees (
-                           user_id INTEGER PRIMARY KEY REFERENCES users(id),
-                           department VARCHAR(255) NOT NULL,
-                           badge_number VARCHAR(50)
+                       FOREIGN KEY (role_id) REFERENCES roles(id),
+                       loyalty_points INT DEFAULT 0,
+                       department VARCHAR(255) NOT NULL,
+                       badge_number VARCHAR(50)
 );
 
 -- Création de la table Rooms
@@ -70,12 +59,12 @@ CREATE TABLE pricing (
 CREATE TABLE reservations (
                               id SERIAL PRIMARY KEY,
                               room_id INTEGER NOT NULL,
-                              client_id INTEGER NOT NULL,
+                              user_id INTEGER NOT NULL,
                               start_date DATE NOT NULL,
                               end_date DATE NOT NULL,
                               total_price DECIMAL(6, 2) CHECK ( total_price >= 0 ),
                               FOREIGN KEY (room_id) REFERENCES rooms(id),
-                              FOREIGN KEY (client_id) REFERENCES clients(user_id),
+                              FOREIGN KEY (user_id) REFERENCES users(id),
 
                               CHECK (end_date > start_date),
                               CHECK (start_date >= current_date),
@@ -92,18 +81,18 @@ CREATE TABLE reservations (
 INSERT INTO roles (name) VALUES ('Admin'), ('Employee'), ('Client');
 
 -- Insertion des utilisateurs
-INSERT INTO users (name, email, password, status, role_id) VALUES
-                                                               ('John Doe', 'john.doe@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Admin')),
-                                                               ('Jane Smith', 'jane.smith@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Employee')),
-                                                               ('Alice Johnson', 'alice.johnson@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Client'));
+--INSERT INTO users (name, email, password, status, role_id, null, null, null) VALUES
+                                                               --('John Doe', 'john.doe@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Admin')),
+                                                               --('Jane Smith', 'jane.smith@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Employee')),
+                                                               --('Alice Johnson', 'alice.johnson@example.com', 'hashedpassword', 'Active', (SELECT id FROM roles WHERE name = 'Client'));
 
 -- Insertion des clients
-INSERT INTO clients (user_id, loyalty_points) VALUES
-    ((SELECT id FROM users WHERE email = 'alice.johnson@example.com'), 100);
+--INSERT INTO clients (user_id, loyalty_points) VALUES
+    --((SELECT id FROM users WHERE email = 'alice.johnson@example.com'), 100);
 
 -- Insertion des employés
-INSERT INTO employees (user_id, department, badge_number) VALUES
-    ((SELECT id FROM users WHERE email = 'jane.smith@example.com'), 'HR', '12345');
+--INSERT INTO employees (user_id, department, badge_number) VALUES
+    --((SELECT id FROM users WHERE email = 'jane.smith@example.com'), 'HR', '12345');
 
 -- Insertion des chambres
 INSERT INTO rooms (room_number, type, availability) VALUES
@@ -127,8 +116,8 @@ INSERT INTO pricing (room_id, season, price) VALUES
 
 
 -- Insertion des réservations
-INSERT INTO reservations (room_id, client_id, start_date, end_date, total_price) VALUES
-    ((SELECT id FROM rooms WHERE room_number = '101'), (SELECT user_id FROM clients WHERE user_id = (SELECT id FROM users WHERE email = 'alice.johnson@example.com')), CURRENT_DATE, CURRENT_DATE + interval '3 days', 240);
+--INSERT INTO reservations (room_id, user_id, start_date, end_date, total_price) VALUES
+    --((SELECT id FROM rooms WHERE room_number = '101'), (SELECT user_id FROM clients WHERE user_id = (SELECT id FROM users WHERE email = 'alice.johnson@example.com')), CURRENT_DATE, CURRENT_DATE + interval '3 days', 240);
 
 
 
@@ -136,22 +125,11 @@ INSERT INTO reservations (room_id, client_id, start_date, end_date, total_price)
 
 
 -- Requête pour trouver toutes les réservations avec détails des clients et des chambres
-SELECT r.id, u.name AS client_name, r.start_date, r.end_date, r.total_price, ro.room_number, ro.type
-FROM reservations r
-         JOIN clients c ON r.client_id = c.user_id
-         JOIN users u ON c.user_id = u.id
-         JOIN rooms ro ON r.room_id = ro.id
-WHERE ro.availability = TRUE;
+
 
 -- Requête pour obtenir le total des points de fidélité pour tous les clients
-SELECT u.name, c.loyalty_points
-FROM clients c
-         JOIN users u ON c.user_id = u.id
-ORDER BY c.loyalty_points DESC;
+
 
 -- Requête pour vérifier les prix des chambres par saison
-SELECT ro.room_number,ro.type, p.season, p.price
-FROM pricing p
-         JOIN rooms ro ON p.room_id = ro.id
-ORDER BY ro.type, p.season;
+
 
