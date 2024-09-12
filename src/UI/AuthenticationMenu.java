@@ -1,4 +1,4 @@
-package Affichage;
+package UI;
 
 import Controller.UserController;
 

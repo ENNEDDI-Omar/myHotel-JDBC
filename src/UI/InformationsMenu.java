@@ -1,4 +1,4 @@
-package Affichage;
+package UI;
 
 public class InformationsMenu {
 }
