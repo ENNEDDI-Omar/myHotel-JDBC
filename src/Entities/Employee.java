@@ -7,7 +7,9 @@ public class Employee extends User {
     private String department;
     private String badgeNumber;
 
-    public Employee() {}
+    public Employee() {
+        super();
+    }
 
     public Employee(int id, String name, String email, String password, Role role, String department, String badgeNumber) {
         super(id, name, email, password, role);

@@ -26,10 +26,10 @@ public class UserController {
         Client client = new Client();
         client.setName(name);
         client.setEmail(email);
-        client.setPassword(userService.hashPassword(password));
+        client.setPassword(password);
         client.setLoyaltyPoints(0);  // Initialiser les points de fidélité à zéro
 
-        userService.insertUser(client);
+        //userService.insertUser(client);
         System.out.println("Client signed up successfully with 0 loyalty points!");
     }
 
@@ -48,7 +48,7 @@ public class UserController {
         Employee employee = new Employee();
         employee.setName(name);
         employee.setEmail(email);
-        employee.setPassword(userService.hashPassword(password));
+        employee.setPassword(password);
         employee.setDepartment(department);
         employee.setBadgeNumber(badgeNumber);
 

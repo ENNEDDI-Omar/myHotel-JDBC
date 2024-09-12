@@ -27,7 +27,7 @@ CREATE TABLE users (
                        name VARCHAR(255) NOT NULL,
                        email VARCHAR(255) UNIQUE NOT NULL,
                        password VARCHAR(255) NOT NULL,
-                       status user_status NOT NULL,
+                       status user_status NOT NULL DEFAULT 'Active',
                        role_id INTEGER NOT NULL,
                        FOREIGN KEY (role_id) REFERENCES roles(id),
                        loyalty_points INT DEFAULT 0,

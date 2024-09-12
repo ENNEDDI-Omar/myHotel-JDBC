@@ -6,7 +6,7 @@ import Utils.ValidationUtils;
 public class Client extends User {
     private int loyaltyPoints;
 
-    public Client() {this.loyaltyPoints=0;}
+    public Client() {super();}
 
     public Client(int id, String name, String email, String password, Role role) {
         super(id, name, email, password, role);

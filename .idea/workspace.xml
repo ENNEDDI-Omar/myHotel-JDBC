@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inclure le digramme UML (image)">
-      <change afterPath="$PROJECT_DIR$/src/DAO/ClientDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/EmployeeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/InvalidUserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/PasswordUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/ValidationEmailAndPasswordUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/ValidationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44ce369f-37d5-42f9-9484-cd951b7a1351/storage_v2/_src_/database/myHotel.aG-sWA/schema/public.abK9xQ.meta" beforeDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="modiffication dans sysytéme d'auth et extention des nouveau package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Affichage/AuthenticationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Affichage/AuthenticationMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoomRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/PasswordUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +122,7 @@
       <workItem from="1725992066530" duration="909000" />
       <workItem from="1725993025898" duration="34872000" />
       <workItem from="1726127160842" duration="6387000" />
-      <workItem from="1726138493734" duration="19245000" />
+      <workItem from="1726138493734" duration="26506000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -244,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726127214682</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modiffication dans sysytéme d'auth et extention des nouveau package">
+      <option name="closed" value="true" />
+      <created>1726164638249</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726164638249</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +255,8 @@
     <MESSAGE value="ajout de la partie d'authentification pour le user (UserRipository+UserService+UserController) plus des modiff" />
     <MESSAGE value="inclure le digramme UML" />
     <MESSAGE value="inclure le digramme UML (image)" />
-    <option name="LAST_COMMIT_MESSAGE" value="inclure le digramme UML (image)" />
+    <MESSAGE value="modiffication dans sysytéme d'auth et extention des nouveau package" />
+    <option name="LAST_COMMIT_MESSAGE" value="modiffication dans sysytéme d'auth et extention des nouveau package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

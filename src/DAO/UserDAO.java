@@ -1,5 +1,6 @@
 package DAO;
 
+import Entities.Role;
 import Entities.User;
 
 public interface UserDAO {
@@ -7,4 +8,5 @@ public interface UserDAO {
     void updateUser(User user);
     void deleteUser(int userId);
     User getUserByEmailAndPassword(String email, String password);
+
 }
