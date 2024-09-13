@@ -1,5 +1,6 @@
 package UI;
 
+import Entities.User;
 import Service.UserService;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class AuthenticationMenu {
         this.scanner = new Scanner(System.in);
     }
 
-    public void displayMenu() {
+    public boolean displayAuthenticationMenu() {
         while (true) {
             System.out.println("\nWelcome to the Authentication Menu");
             System.out.println("1. Sign Up");
@@ -25,31 +26,19 @@ public class AuthenticationMenu {
             switch (choice) {
                 case 1:
                     userService.registerUser();  // Assuming this method handles the full registration process
-                    break;
+                    return false;
                 case 2:
-                    login();  // Handle user login
-                    break;
+                    return userService.signIn();
                 case 3:
                     System.out.println("Exiting...");
-                    return;  // Exit the menu
+                    return false;
                 default:
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
         }
     }
 
-    private void login() {
-        System.out.println("Enter your email:");
-        String email = scanner.nextLine();
-        System.out.println("Enter your password:");
-        String password = scanner.nextLine();
 
-        if (userService.signIn(email, password)) {
-            System.out.println("Login successful! Welcome to your dashboard!");
-        } else {
-            System.out.println("Invalid email or password. Please try again.");
-        }
-    }
 
     public void closeMenu() {
         scanner.close();  //
