@@ -111,6 +111,22 @@ public class UserRepository implements UserDAO {
         return null;
     }
 
+    public Role getRoleByName(String roleName) {
+        String sql = "SELECT id, name FROM roles WHERE name = ?";
+        try (Connection connection = DbConnection.getInstance().getConx();
+             PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, roleName);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Role(rs.getInt("id"), rs.getString("name"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving role: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null; // or throw an exception if role is critical
+    }
+
     @Override
     public void updateUser(User user) {
         // Placeholder for compilation
