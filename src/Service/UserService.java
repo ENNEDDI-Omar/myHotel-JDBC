@@ -1,6 +1,7 @@
 package Service;
 
 import Entities.Role;
+import Exceptions.InvalidUserException;
 import Repository.UserRepository;
 import Entities.User;
 import Entities.Client;
@@ -17,16 +18,28 @@ public class UserService {
     }
 
     public void registerUser() {
-        System.out.println("Enter user type (client/employee):");
-        String userType = scanner.nextLine();
-        User user = "client".equalsIgnoreCase(userType) ? new Client() : new Employee();
+        String userType = "";
+        User user = null;
+
+        while (user == null) {
+            System.out.println("Enter user type (client/employee):");
+            userType = scanner.nextLine().trim().toLowerCase();
+
+            if ("client".equals(userType)) {
+                user = new Client();
+            } else if ("employee".equals(userType)) {
+                user = new Employee();
+            } else {
+                System.out.println("Invalid input. Please enter 'client' or 'employee'.");
+            }
+        }
 
         System.out.println("Enter name:");
         user.setName(scanner.nextLine());
         System.out.println("Enter email:");
         user.setEmail(scanner.nextLine());
         System.out.println("Enter password:");
-        user.setPassword(scanner.nextLine()); // Password is hashed inside the setPassword method
+        user.setPassword(scanner.nextLine());  // Password is hashed inside the setPassword method
 
         if (user instanceof Employee) {
             System.out.println("Enter department:");
@@ -38,13 +51,21 @@ public class UserService {
         Role role = userRepository.getRoleByName(userType.equalsIgnoreCase("client") ? "Client" : "Employee");
         if (role != null) {
             user.setRole(role);
-            userRepository.saveUser(user);
-
-            System.out.println("User registered as " + role.getName() + "successfully.");
         } else {
             System.out.println("Role not found, cannot register user.");
+            return; // Exit the method if no valid role found
+        }
+
+        try {
+            userRepository.saveUser(user);
+            System.out.println("User registered as " + role.getName() + " successfully.");
+        } catch (Exception e) {
+            System.err.println("Error during user registration: " + e.getMessage());
+            throw new InvalidUserException("Failed to register user.", e);
         }
     }
+
+
 
     public boolean signIn() {
         System.out.println("Enter your email:");

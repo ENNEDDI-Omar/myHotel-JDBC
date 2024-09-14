@@ -3,8 +3,12 @@ package Entities;
 import Exceptions.InvalidUserException;
 import Utils.ValidationUtils;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Client extends User {
     private int loyaltyPoints;
+    private Set<Reservation> reservations = new HashSet<>();
 
     public Client() {super();}
 

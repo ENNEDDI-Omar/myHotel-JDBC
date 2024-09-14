@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inetgration du AuthenticationMenu">
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inetgration du MainMenu">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myHotel-JDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myHotel-JDBC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/AuthenticationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/AuthenticationMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +79,17 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ],
     "DatabaseDriversLRU": [
       "postgresql"
     ],
@@ -91,13 +103,25 @@
       <recent name="C:\Users\Youcode\IdeaProjects\myHotel-JDBC\src\ConçeptionUML" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="myHotel-JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="script.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/Database/script.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="47e2c7e1-58cc-470d-a6c4-d714b7040b36" namespace="database/&quot;myHotel&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -122,7 +146,9 @@
       <workItem from="1726127160842" duration="6387000" />
       <workItem from="1726138493734" duration="26506000" />
       <workItem from="1726180546602" duration="6717000" />
-      <workItem from="1726214924640" duration="6210000" />
+      <workItem from="1726214924640" duration="6570000" />
+      <workItem from="1726234809952" duration="8627000" />
+      <workItem from="1726318811565" duration="6486000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -260,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726187225673</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="inetgration du MainMenu">
+      <option name="closed" value="true" />
+      <created>1726234746373</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726234746373</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +317,7 @@
     <MESSAGE value="remodiff du ValidationUtils, script sql et autre package" />
     <MESSAGE value="mise en place du UI package pour les menus et annulation du Controller Package et de garder l'ensemble de la logique metier dans services package" />
     <MESSAGE value="inetgration du AuthenticationMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="inetgration du AuthenticationMenu" />
+    <MESSAGE value="inetgration du MainMenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="inetgration du MainMenu" />
   </component>
 </project>

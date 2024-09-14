@@ -15,7 +15,7 @@ public class UserRepository implements UserDAO {
 
     @Override
     public void saveUser(User user) {
-        String sql = "INSERT INTO users (name, email, password, status, role_id, loyalty_points, department, badge_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO users (name, email, password, status, role_id, loyalty_points, department, badge_number) VALUES (?, ?, ?, ?::user_status, ?, ?, ?, ?)";
         try (Connection connection = DbConnection.getInstance().getConx();
              PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, user.getName());
@@ -58,7 +58,7 @@ public class UserRepository implements UserDAO {
 
                 if (passwordMatch) {
                     int roleId = rs.getInt("role_id");
-                    if (roleId == 1) {
+                    if (roleId == 3) {
                         user = new Client(
                                 rs.getInt("id"),
                                 rs.getString("name"),

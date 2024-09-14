@@ -2,6 +2,8 @@ package Entities;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Reservation {
     private int id;
@@ -10,6 +12,7 @@ public class Reservation {
     private LocalDate startDate;
     private LocalDate endDate;
     private BigDecimal totalPrice;
+    private Set<Room> rooms = new HashSet<>();
 
     // Default constructor
     public Reservation() {}

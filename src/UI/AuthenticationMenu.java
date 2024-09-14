@@ -1,6 +1,7 @@
 package UI;
 
 import Entities.User;
+import Exceptions.InvalidUserException;
 import Service.UserService;
 import java.util.Scanner;
 
@@ -25,7 +26,7 @@ public class AuthenticationMenu {
 
             switch (choice) {
                 case 1:
-                    userService.registerUser();  // Assuming this method handles the full registration process
+                    userService.registerUser();
                     return false;
                 case 2:
                     return userService.signIn();
@@ -37,7 +38,6 @@ public class AuthenticationMenu {
             }
         }
     }
-
 
 
     public void closeMenu() {

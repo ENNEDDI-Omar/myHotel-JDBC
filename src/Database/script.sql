@@ -1,5 +1,7 @@
 -- Suppression des tables existantes pour éviter des erreurs lors de la création
 DROP TABLE IF EXISTS reservations CASCADE;
+DROP TABLE IF EXISTS clients CASCADE;
+DROP TABLE IF EXISTS employees CASCADE;
 DROP TABLE IF EXISTS pricing CASCADE;
 DROP TABLE IF EXISTS rooms CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
@@ -31,7 +33,7 @@ CREATE TABLE users (
                        role_id INTEGER NOT NULL,
                        FOREIGN KEY (role_id) REFERENCES roles(id),
                        loyalty_points INT DEFAULT 0,
-                       department VARCHAR(255) NOT NULL,
+                       department VARCHAR(255),
                        badge_number VARCHAR(50)
 );
 
@@ -121,7 +123,7 @@ INSERT INTO pricing (room_id, season, price) VALUES
 
 
 
------------------------------------------- Vérification des jointures: ------------------------------------
+------------------------------------------ Vérification des jointures ------------------------------------
 
 
 -- Requête pour trouver toutes les réservations avec détails des clients et des chambres

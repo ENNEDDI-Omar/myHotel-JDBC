@@ -6,14 +6,14 @@ import java.sql.SQLException;
 
 public class DbConnection {
     //création des propriétées
-    private static final String URL = System.getenv("Db_Url");
-    private static final String User = System.getenv("Db_User");
+    private static final String URL = "jdbc:postgresql://localhost:5432/myHotel";
+    private static final String User = "myHotel";
     private static  final String Password = "";
     private static Connection conx = null;
     private static DbConnection instance = null;
 
     /**
-     *constructeur privé pour instanciation extérieur
+     *Constructeur privé pour instanciation extérieur
      */
     //mise en place du constructeur privé
     private DbConnection()
@@ -22,7 +22,7 @@ public class DbConnection {
     }
 
     /**
-     * instanciation de la classe par la methode getInstance
+     *Instanciation de la classe par la methode getInstance
      *
      * @return instance en singleton dela dbConnection
      */
@@ -33,7 +33,7 @@ public class DbConnection {
             instance = new DbConnection();
         }else {
             try {
-                // Vérifie si la connexion est toujours valide
+
                 if (conx == null || conx.isClosed()) {
                     instance.connect();
                 }
@@ -46,7 +46,7 @@ public class DbConnection {
     }
 
     /**
-     * méthode pour établir de la connexion
+     * Méthode pour établir de la connexion
      */
     private void connect()
     {
@@ -69,7 +69,7 @@ public class DbConnection {
     }
 
     /**
-     * methode pour getConx pour Rétablir la connxion
+     * Methode pour getConx pour Rétablir la connxion
      * @return la connexion actuel
      */
     public Connection getConx()
@@ -87,7 +87,7 @@ public class DbConnection {
     }
 
     /**
-     * méthode pour férmer la connexion avec la base de données
+     * Méthode pour férmer la connexion avec la base de données
      */
     public static void closeConnexion()
     {

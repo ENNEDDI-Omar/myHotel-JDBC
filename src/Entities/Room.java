@@ -2,11 +2,19 @@ package Entities;
 
 import Enums.RoomType;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
 public class Room {
     private int id;
     private String roomNumber;
     private RoomType type;
     private boolean availability;
+    private List<Reservation> reservationList = new ArrayList<>();
+    private Set<Pricing> pricingList = new HashSet<>();
 
 
     public Room() {}
