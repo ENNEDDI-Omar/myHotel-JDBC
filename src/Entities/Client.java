@@ -37,6 +37,7 @@ public class Client extends User {
                 ", name='" + getName() + '\'' +
                 ", email='" + getEmail() + '\'' +
                 "loyaltyPoints=" + getLoyaltyPoints() +
+                ", reservationsCount= " + (reservations != null ? reservations.size() : 0) +
                 '}';
     }
 }

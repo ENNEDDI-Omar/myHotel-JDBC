@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="inetgration du MainMenu">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_4.xml" beforeDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="resoudre des probleme de sign up et laison entre les entities">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/ReservationExeption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myHotel-JDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myHotel-JDBC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AuthenticationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/AuthenticationMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Exception" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -148,7 +138,7 @@
       <workItem from="1726180546602" duration="6717000" />
       <workItem from="1726214924640" duration="6570000" />
       <workItem from="1726234809952" duration="8627000" />
-      <workItem from="1726318811565" duration="6486000" />
+      <workItem from="1726318811565" duration="9632000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -294,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726234746373</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="resoudre des probleme de sign up et laison entre les entities">
+      <option name="closed" value="true" />
+      <created>1726330188596</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726330188596</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +316,7 @@
     <MESSAGE value="mise en place du UI package pour les menus et annulation du Controller Package et de garder l'ensemble de la logique metier dans services package" />
     <MESSAGE value="inetgration du AuthenticationMenu" />
     <MESSAGE value="inetgration du MainMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="inetgration du MainMenu" />
+    <MESSAGE value="resoudre des probleme de sign up et laison entre les entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="resoudre des probleme de sign up et laison entre les entities" />
   </component>
 </project>

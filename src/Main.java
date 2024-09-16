@@ -18,6 +18,3 @@ public class Main {
     }
 }
 
-//client
-//client@gmail.com
-//azertyuio
