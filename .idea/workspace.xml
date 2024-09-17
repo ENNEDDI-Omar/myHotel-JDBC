@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="resoudre des probleme de sign up et laison entre les entities">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/ReservationExeption.java" afterDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="modification des exceptions et des validations">
+      <change afterPath="$PROJECT_DIR$/src/DAO/ReservationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/RoomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/RoomMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ReservationValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,40 +60,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Database Script.script.sql.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Youcode/Downloads/postgresql-42.7.4.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.script.sql.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Youcode/Downloads/postgresql-42.7.4.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ],
-    "DatabaseDriversLRU": [
-      "postgresql"
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "47e2c7e1-58cc-470d-a6c4-d714b7040b36/database/\"myHotel\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;47e2c7e1-58cc-470d-a6c4-d714b7040b36/database/\&quot;myHotel\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Youcode\IdeaProjects\myHotel-JDBC\src\ConçeptionUML" />
@@ -139,6 +145,8 @@
       <workItem from="1726214924640" duration="6570000" />
       <workItem from="1726234809952" duration="8627000" />
       <workItem from="1726318811565" duration="9632000" />
+      <workItem from="1726524423045" duration="4182000" />
+      <workItem from="1726572037543" duration="6121000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -292,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726330188596</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="modification des exceptions et des validations">
+      <option name="closed" value="true" />
+      <created>1726524348785</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726524348785</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +333,7 @@
     <MESSAGE value="inetgration du AuthenticationMenu" />
     <MESSAGE value="inetgration du MainMenu" />
     <MESSAGE value="resoudre des probleme de sign up et laison entre les entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="resoudre des probleme de sign up et laison entre les entities" />
+    <MESSAGE value="modification des exceptions et des validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification des exceptions et des validations" />
   </component>
 </project>
