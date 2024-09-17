@@ -16,7 +16,7 @@ public class RoomRepository implements RoomDAO {
 
     @Override
     public void insertRoom(Room room) {
-        String sql = "INSERT INTO rooms (room_number, type, availability) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO rooms (room_number, type, availability) VALUES (?, ?::room_type, ?)";
         try (Connection connection = DbConnection.getInstance().getConx();
              PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, room.getRoomNumber());
