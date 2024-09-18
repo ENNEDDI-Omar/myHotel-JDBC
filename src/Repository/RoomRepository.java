@@ -81,7 +81,7 @@ public class RoomRepository implements RoomDAO {
     }
 
     @Override
-    public List<Room> getAllRooms() {
+    public static List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
         String sql = "SELECT * FROM rooms";
         try (Connection connection = DbConnection.getInstance().getConx();

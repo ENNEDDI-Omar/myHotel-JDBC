@@ -51,10 +51,11 @@ CREATE INDEX idx_room_number ON rooms(room_number);
 -- Création de la table Pricing
 CREATE TABLE pricing (
                          id SERIAL PRIMARY KEY,
-                         room_id INTEGER NOT NULL,
+                         room_type room_type NOT NULL,
                          season season_type NOT NULL,
                          price INTEGER NOT NULL CHECK (price >= 0),
-                         FOREIGN KEY (room_id) REFERENCES rooms(id)
+                         UNIQUE (room_type, season)
+
 );
 
 -- Création de la table Reservations
@@ -106,15 +107,15 @@ INSERT INTO rooms (room_number, type, availability) VALUES
 
 -- Insertion des prix
 -- Insérer les prix pour chaque type de chambre et chaque saison
-INSERT INTO pricing (room_id, season, price) VALUES
-                                                 ((SELECT id FROM rooms WHERE room_number = '101'), 'low', 40),
-                                                 ((SELECT id FROM rooms WHERE room_number = '101'), 'high', 60),
-                                                 ((SELECT id FROM rooms WHERE room_number = '102'), 'low', 60),
-                                                 ((SELECT id FROM rooms WHERE room_number = '102'), 'high', 90),
-                                                 ((SELECT id FROM rooms WHERE room_number = '103'), 'low', 100),
-                                                 ((SELECT id FROM rooms WHERE room_number = '103'), 'high', 150),
-                                                 ((SELECT id FROM rooms WHERE room_number = '104'), 'low', 200),
-                                                 ((SELECT id FROM rooms WHERE room_number = '104'), 'high', 300);
+INSERT INTO pricing (room_type, season, price) VALUES
+                                                   ('Single', 'low', 40),
+                                                   ('Single', 'high', 60),
+                                                   ('Double', 'low', 60),
+                                                   ('Double', 'high', 90),
+                                                   ('Suite', 'low', 100),
+                                                   ('Suite', 'high', 150),
+                                                   ('Deluxe', 'low', 200),
+                                                   ('Deluxe', 'high', 300);
 
 
 -- Insertion des réservations

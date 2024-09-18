@@ -1,10 +1,11 @@
 package Entities;
 
+import Enums.RoomType;
 import Enums.SeasonType;
 
 public class Pricing {
     private int id;
-    private Room room;
+    private RoomType roomType;
     private SeasonType season;
     private int price;
 
@@ -12,9 +13,9 @@ public class Pricing {
     public Pricing() {}
 
     // Parameterized constructor
-    public Pricing(int id, Room room, SeasonType season, int price) {
+    public Pricing(int id, RoomType roomType, SeasonType season, int price) {
         this.id = id;
-        this.room = room;
+        this.roomType = roomType;
         this.season = season;
         this.price = price;
     }
@@ -28,12 +29,12 @@ public class Pricing {
         this.id = id;
     }
 
-    public Room getRoom() {
-        return room;
+    public RoomType getRoomType() {
+        return roomType;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
+    public void setRoomType(RoomType roomType) {
+        this.roomType = roomType;
     }
 
     public SeasonType getSeason() {
@@ -57,7 +58,7 @@ public class Pricing {
     public String toString() {
         return "Pricing{" +
                 "id=" + getId() +
-                ", room=" + getRoom() +
+                ", roomType=" + getRoomType() +
                 ", season=" + getSeason() +
                 ", price=" + getPrice() +
                 '}';

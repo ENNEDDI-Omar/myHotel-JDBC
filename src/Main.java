@@ -1,3 +1,4 @@
+import Repository.PricingRepository;
 import Repository.ReservationRepository;
 import Repository.RoomRepository;
 import Repository.UserRepository;
@@ -13,6 +14,7 @@ public class Main {
         // Instantiate repositories
         UserRepository userRepository = new UserRepository();
         RoomRepository roomRepository = new RoomRepository();
+        PricingRepository pricingRepository = new PricingRepository();
         ReservationRepository reservationRepository = new ReservationRepository();
 
         // Services
@@ -24,7 +26,7 @@ public class Main {
         ReservationValidation reservationValidation = new ReservationValidation(roomService);
 
         // Instantiate the ReservationService with the validation class
-        ReservationService reservationService = new ReservationService(reservationRepository, reservationValidation);
+        ReservationService reservationService = new ReservationService(reservationRepository, reservationValidation, pricingRepository);
 
         // Create the MainMenu instance with all services
         MainMenu mainMenu = new MainMenu(userService, roomService, reservationService, statisticsService);
