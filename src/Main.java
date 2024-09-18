@@ -3,6 +3,7 @@ import Repository.RoomRepository;
 import Repository.UserRepository;
 import Service.ReservationService;
 import Service.RoomService;
+import Service.StatisticsService;
 import Service.UserService;
 import UI.MainMenu;
 import Utils.ReservationValidation;
@@ -17,6 +18,7 @@ public class Main {
         // Services
         UserService userService = new UserService(userRepository);
         RoomService roomService = new RoomService(roomRepository);
+        StatisticsService statisticsService = new StatisticsService(reservationRepository);
 
         // Validation class instance
         ReservationValidation reservationValidation = new ReservationValidation(roomService);
@@ -25,7 +27,7 @@ public class Main {
         ReservationService reservationService = new ReservationService(reservationRepository, reservationValidation);
 
         // Create the MainMenu instance with all services
-        MainMenu mainMenu = new MainMenu(userService, roomService, reservationService);
+        MainMenu mainMenu = new MainMenu(userService, roomService, reservationService, statisticsService);
         mainMenu.displayMainMenu();
     }
 }

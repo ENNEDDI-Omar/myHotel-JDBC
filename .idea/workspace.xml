@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="réintegration de la gestion des rooms dans l'app">
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="modification dans l'implementation de la reservation">
+      <change afterPath="$PROJECT_DIR$/src/Service/StatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/StatisticsMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/ReservationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/ReservationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ReservationMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +141,7 @@
       <workItem from="1726234809952" duration="8627000" />
       <workItem from="1726318811565" duration="9632000" />
       <workItem from="1726524423045" duration="4182000" />
-      <workItem from="1726572037543" duration="14671000" />
+      <workItem from="1726572037543" duration="16684000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -315,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726595064260</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="modification dans l'implementation de la reservation">
+      <option name="closed" value="true" />
+      <created>1726617082342</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1726617082342</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +346,7 @@
     <MESSAGE value="resoudre des probleme de sign up et laison entre les entities" />
     <MESSAGE value="modification des exceptions et des validations" />
     <MESSAGE value="réintegration de la gestion des rooms dans l'app" />
-    <option name="LAST_COMMIT_MESSAGE" value="réintegration de la gestion des rooms dans l'app" />
+    <MESSAGE value="modification dans l'implementation de la reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification dans l'implementation de la reservation" />
   </component>
 </project>
