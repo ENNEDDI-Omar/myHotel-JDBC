@@ -9,6 +9,7 @@ import Entities.Room;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ReservationRepository implements ReservationDAO {
 
@@ -117,7 +118,8 @@ public class ReservationRepository implements ReservationDAO {
         return reservations;
     }
 
-    private Reservation createReservationFromResultSet(ResultSet rs) throws SQLException {
+    private Reservation createReservationFromResultSet(ResultSet rs) throws SQLException
+    {
         Reservation reservation = new Reservation();
         reservation.setId(rs.getInt("id"));
         // Assume Room and Client are fetched and created elsewhere or use lazy loading if necessary
@@ -127,30 +129,9 @@ public class ReservationRepository implements ReservationDAO {
         return reservation;
     }
 
-    public void bookAvailableRoom(Reservation reservation)
-    {
-        String sql = "INSERT INTO reservations (room_id, user_id, start_date, end_date, total_price) ";
-        try (Connection connection = DbConnection.getInstance().getConx();
-             PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-            stmt.setInt(1, reservation.getRoom().getId());
-            stmt.setInt(2, reservation.getClient().getId());
-            stmt.setDate(3, java.sql.Date.valueOf(reservation.getStartDate()));
-            stmt.setDate(4, java.sql.Date.valueOf(reservation.getEndDate()));
-            stmt.setBigDecimal(5, reservation.getTotalPrice());
-            int affectedRows = stmt.executeUpdate();
-            if (affectedRows == 0) {
-                throw new SQLException("Creating reservation failed, no rows affected.");
-            }
 
-            try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                    reservation.setId(generatedKeys.getInt(1));
-                } else {
-                    throw new SQLException("Creating reservation failed, no ID obtained.");
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException("Error adding reservation: " + e.getMessage(), e);
-        }
-    }
+
 }
+
+
+

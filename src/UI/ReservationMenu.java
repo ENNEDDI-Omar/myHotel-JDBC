@@ -65,7 +65,7 @@ public class ReservationMenu {
             Reservation reservation = new Reservation();  // Assuming you have a constructor to set these values
             reservation.setStartDate(startDate);
             reservation.setEndDate(endDate);
-            // Set other values, e.g., Room and Client based on IDs
+
 
             reservationService.addReservation(reservation);
         } catch (Exception e) {

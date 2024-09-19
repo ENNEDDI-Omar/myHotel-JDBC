@@ -17,16 +17,23 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class ReservationService {
     private ReservationRepository reservationRepository;
     private ReservationValidation reservationValidation;
     private PricingRepository pricingRepository;
+    private RoomRepository roomRepository;
 
-    public ReservationService(ReservationRepository reservationRepository, ReservationValidation reservationValidation, PricingRepository pricingRepository) {
+    public ReservationService(ReservationRepository reservationRepository, ReservationValidation reservationValidation, PricingRepository pricingRepository, RoomRepository roomRepository) {
         this.reservationRepository = reservationRepository;
         this.reservationValidation = reservationValidation;
         this.pricingRepository = pricingRepository;
+        this.roomRepository = roomRepository;
+    }
+
+    public ReservationService() {
+
     }
 
     public void addReservation(Reservation reservation) {
@@ -103,4 +110,28 @@ public class ReservationService {
         return totalPrice;
     }
 
+    //methode BookAvailableRoom ( MISE EN SITUATION )
+
+    public Optional<Reservation> bookAvailableRoom(String roomType, Client client, LocalDate startDate, LocalDate endDate) throws SQLException {
+
+        Optional<Room> availableRoom = roomRepository.getAllRooms().stream()
+                .filter(room -> room.getType().toString().equalsIgnoreCase(roomType) && room.isAvailable())
+                .findFirst();
+
+        if (availableRoom.isPresent()) {
+            Room room = availableRoom.get();
+            BigDecimal totalPrice = calculateTotalPrice(room, startDate, endDate);
+            Reservation newReservation = new Reservation(room, client, startDate, endDate, totalPrice);
+            try {
+                addReservation(newReservation);
+                roomRepository.updateRoom(room);
+                return Optional.of(newReservation);
+            } catch (Exception e) {
+                System.err.println("Failed to book room: " + e.getMessage());
+            }
+        } else {
+            System.out.println("No available rooms found for type " + roomType);
+        }
+        return Optional.empty();
+    }
 }

@@ -1,6 +1,7 @@
 package Repository;
 
 import DAO.RoomDAO;
+import Entities.Reservation;
 import Entities.Room;
 import Database.DbConnection;
 import Enums.RoomType;
@@ -10,7 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RoomRepository implements RoomDAO {
 
@@ -81,7 +84,7 @@ public class RoomRepository implements RoomDAO {
     }
 
     @Override
-    public static List<Room> getAllRooms() {
+    public List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
         String sql = "SELECT * FROM rooms";
         try (Connection connection = DbConnection.getInstance().getConx();
@@ -101,4 +104,54 @@ public class RoomRepository implements RoomDAO {
         }
         return rooms;
     }
+
+    public Room getRoomByNumber(String roomNumber) throws SQLException {
+        String query = "SELECT * FROM rooms WHERE room_number = ?";
+        Room room = null;
+        try (Connection connection = DbConnection.getInstance().getConx();
+             PreparedStatement pstmt = connection.prepareStatement(query);
+             ResultSet rs = pstmt.executeQuery())
+        {
+            while (rs.next())
+            {
+                room = new Room();
+                room.setId(rs.getInt("id"));
+                room.setRoomNumber(rs.getString("room_number"));
+                room.setType(RoomType.valueOf(rs.getString("type")));
+                room.setAvailable(rs.getBoolean("availability"));
+                return room;
+            }
+        }catch (SQLException e)
+        {
+            System.out.println("Error retrieving room by number : " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Map<Room, Boolean> getAllAvailableRooms(String type) throws SQLException
+    {
+        List<Room> availableRooms = new ArrayList<>();
+        String query = "SELECT * FROM rooms WHERE type = ? AND availability = TRUE";
+        try (Connection connection = DbConnection.getInstance().getConx();
+        PreparedStatement pstmt = connection.prepareStatement(query);)
+        {
+            pstmt.setString(1, type);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next())
+            {
+                Room room = new Room();
+                room.setId(rs.getInt("id"));
+                room.setRoomNumber(rs.getString("room_number"));
+                room.setType(RoomType.valueOf(rs.getString("type")));
+                room.setAvailable(rs.getBoolean("availability"));
+                availableRooms.add(room);
+            }
+        }catch (SQLException e)
+        {
+            System.err.println("SQL Erreur: " + e.getMessage());
+        }
+        return (Map<Room, Boolean>) availableRooms;
+    }
+
 }
