@@ -24,16 +24,24 @@ public class ReservationService {
     private ReservationValidation reservationValidation;
     private PricingRepository pricingRepository;
     private RoomRepository roomRepository;
+    private HashMap<String, Boolean> availableRooms;
 
     public ReservationService(ReservationRepository reservationRepository, ReservationValidation reservationValidation, PricingRepository pricingRepository, RoomRepository roomRepository) {
         this.reservationRepository = reservationRepository;
         this.reservationValidation = reservationValidation;
         this.pricingRepository = pricingRepository;
         this.roomRepository = roomRepository;
+        intializeAvailableRooms();
     }
 
     public ReservationService() {
 
+    }
+
+    private void intializeAvailableRooms()
+    {
+        List<Room> rooms = RoomRepository.getAllRooms();
+        rooms.forEach(room -> availableRooms.put(room.getRoomNumber(), room.isAvailable()));
     }
 
     public void addReservation(Reservation reservation) {
@@ -134,4 +142,24 @@ public class ReservationService {
         }
         return Optional.empty();
     }
+
+
+
+    /////////////////////////MISE EN SITUATION: /////////////////
+
+//    implémenter la méthode bookAvailableRoom :
+//    Stockage en mémoire des chambres :
+//
+//    Utilise une HashMap<String, Boolean> pour stocker les chambres avec leurs disponibilités.
+//    Chaque clé représente l'identifiant unique d'une chambre, et la valeur Boolean indique si la chambre est disponible ou non.
+//
+//    Vérification des chambres disponibles avec Streams :
+//
+//    Utilise les Streams pour filtrer les chambres disponibles et qui correspondent au type de chambre.
+//    Gère les absences de chambres disponibles avec Optionals.
+//
+//    Persistance des réservations avec JDBC :
+//    Si une chambre est disponible,  persister dans la base de données pour enregistrer la réservation.
+//    Implémente cela en suivant l'architecture en couches (avec des services et des repositories).
+
 }

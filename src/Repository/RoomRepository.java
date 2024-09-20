@@ -84,7 +84,7 @@ public class RoomRepository implements RoomDAO {
     }
 
     @Override
-    public List<Room> getAllRooms() {
+    public static List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
         String sql = "SELECT * FROM rooms";
         try (Connection connection = DbConnection.getInstance().getConx();
@@ -129,15 +129,16 @@ public class RoomRepository implements RoomDAO {
         return null;
     }
 
-    public static Map<Room, Boolean> getAllAvailableRooms(String type) throws SQLException
+    public List<Room> getRoomsByType(RoomType type)
     {
-        List<Room> availableRooms = new ArrayList<>();
-        String query = "SELECT * FROM rooms WHERE type = ? AND availability = TRUE";
+        List<Room> rooms = new ArrayList<>();
+        String query = "SELECT * From rooms WHERE type = ?::room_type";
         try (Connection connection = DbConnection.getInstance().getConx();
-        PreparedStatement pstmt = connection.prepareStatement(query);)
+             PreparedStatement pstmt = connection.prepareStatement(query))
         {
-            pstmt.setString(1, type);
+            pstmt.setString(1, type.toString());
             ResultSet rs = pstmt.executeQuery();
+
             while (rs.next())
             {
                 Room room = new Room();
@@ -145,13 +146,13 @@ public class RoomRepository implements RoomDAO {
                 room.setRoomNumber(rs.getString("room_number"));
                 room.setType(RoomType.valueOf(rs.getString("type")));
                 room.setAvailable(rs.getBoolean("availability"));
-                availableRooms.add(room);
+                rooms.add(room);
             }
-        }catch (SQLException e)
-        {
-            System.err.println("SQL Erreur: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Error retrieving all rooms type from database: " + e.getMessage());
+            e.printStackTrace();
         }
-        return (Map<Room, Boolean>) availableRooms;
+        return rooms;
     }
 
 }
