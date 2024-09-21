@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="ajustement des sats">
-      <change afterPath="$PROJECT_DIR$/src/Repository/PricingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/SeasonUtils.java" afterDir="false" />
+    <list default="true" id="3eb9be9d-b2a1-407d-97f3-0002f17c01aa" name="Changes" comment="mise en situation inclus">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Pricing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DbConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,47 +55,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Database Script.script.sql.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Database/script.sql",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.script.sql.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Youcode/IdeaProjects/BatiCuisine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Youcode/IdeaProjects/myHotel-JDBC/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ],
-    "DatabaseDriversLRU": [
-      "postgresql"
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "47e2c7e1-58cc-470d-a6c4-d714b7040b36/database/\"myHotel\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;47e2c7e1-58cc-470d-a6c4-d714b7040b36/database/\&quot;myHotel\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Youcode\IdeaProjects\myHotel-JDBC\src\ConçeptionUML" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Database Script.script.sql">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DbUrl" value="jdbc:postgresql://localhost:5432/myhotel" />
+        <env name="DbPsw" value="omario" />
+        <env name="DbUser" value="omario" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="myHotel-JDBC" />
       <method v="2">
@@ -113,6 +113,10 @@
       <data-source id="47e2c7e1-58cc-470d-a6c4-d714b7040b36" namespace="database/&quot;myHotel&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Database Script.script.sql" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -147,7 +151,10 @@
       <workItem from="1726318811565" duration="9632000" />
       <workItem from="1726524423045" duration="4182000" />
       <workItem from="1726572037543" duration="19591000" />
-      <workItem from="1726648657852" duration="11317000" />
+      <workItem from="1726648657852" duration="40862000" />
+      <workItem from="1726823742406" duration="5951000" />
+      <workItem from="1726845481319" duration="285000" />
+      <workItem from="1726911297976" duration="1242000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -333,7 +340,31 @@
       <option name="project" value="LOCAL" />
       <updated>1726619136685</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ajustement du pricing dynamique">
+      <option name="closed" value="true" />
+      <created>1726690509134</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726690509134</updated>
+    </task>
+    <task id="LOCAL-00025" summary="integration de la methode dans ReservationService (Mise en Situation)">
+      <option name="closed" value="true" />
+      <created>1726754607203</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726754607203</updated>
+    </task>
+    <task id="LOCAL-00026" summary="mise en situation inclus">
+      <option name="closed" value="true" />
+      <created>1726791469866</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726791469866</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +393,9 @@
     <MESSAGE value="réintegration de la gestion des rooms dans l'app" />
     <MESSAGE value="modification dans l'implementation de la reservation" />
     <MESSAGE value="ajustement des sats" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustement des sats" />
+    <MESSAGE value="ajustement du pricing dynamique" />
+    <MESSAGE value="integration de la methode dans ReservationService (Mise en Situation)" />
+    <MESSAGE value="mise en situation inclus" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en situation inclus" />
   </component>
 </project>
